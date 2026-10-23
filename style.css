@@ -1,0 +1,970 @@
+
+/* ==========================================================
+   SUNSET — ESTILOS GENERALES
+   ========================================================== */
+
+/* 1. IMPORTACIÓN DE FUENTES */
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@400;500;600&display=swap');
+
+
+/* 2. VARIABLES */
+:root {
+  --cream: #faf6ef;
+  --green: #3c5e4b;
+  --ink: #292821;
+  --muted: #777167;
+  --line: #d9dfd2;
+  --coralPastel: #D2B48C;
+  --limonadaSoft: #fff1c5;
+  --marfilCalido: #faedcd;
+  --champagneOro: #d2b48c;
+  --blancoCalido: #FFFCF7;
+  --naranja: #b5751a;
+
+}
+
+
+/* 3. RESET Y CONFIGURACIÓN GENERAL */
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  background: var(--blancoCalido);
+  color: var(--line);
+  font-family: 'DM Sans', sans-serif;
+  font-size: 16px;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+p {
+  max-width: 70ch;
+  line-height: 1.75;
+  color: var(--muted);
+}
+
+
+/* 4. TIPOGRAFÍA */
+h1,
+h2,
+h3,
+.brand {
+  font-family: 'Playfair Display', serif;
+  font-weight: 500;
+}
+
+.wrap-home-feature h2, .wrap-home-testimonials h2 {
+  color: var(--naranja);
+}
+
+.wrap-home-testimonials b, h3 {
+  color: var(--naranja);
+}
+
+
+
+h1 {
+  margin: 24px 0;
+  font-size: clamp(3rem, 6vw, 5.5rem);
+  line-height: 1.08;
+  letter-spacing: -0.04em;
+}
+
+h2 {
+  margin: 0 0 16px;
+  font-size: clamp(2.2rem, 4vw, 3.5rem);
+}
+
+h3 {
+  margin: 14px 0;
+  font-size: 1.7rem;
+}
+
+
+/* ==========================================================
+   5. HEADER Y NAVEGACIÓN
+   ========================================================== */
+
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 20px;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  padding: 18px clamp(18px, 4vw, 70px);
+  background: var(--blancoCalido);
+  border-bottom: 0.5px solid #ede8df;
+}
+
+.brand {
+  font-size: 1.65rem;
+  white-space: nowrap;
+}
+
+.brand span {
+  margin-right: 10px;
+  padding: 8px;
+  background: var(--green);
+  color: white;
+  border-radius: 50%;
+  font: 20px sans-serif;
+}
+
+.logo-nav {
+    width: 150px;
+    height: 60px;
+    object-fit: cover;
+}
+
+nav {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: clamp(10px, 1.4vw, 25px);
+}
+
+nav a {
+  color: #625e56;
+  font-size: 14px;
+  white-space: nowrap;
+}
+
+nav a:hover,
+nav a.active {
+  color: var(--green);
+}
+
+.mobile-menu {
+  display: none;
+}
+
+
+/* ==========================================================
+   6. BOTONES Y ELEMENTOS REUTILIZABLES
+   ========================================================== */
+
+.btn {
+  display: inline-block;
+  padding: 15px 26px;
+
+  background: var(--naranja);
+  border: 1px solid var(--champagneOro);
+  border-radius: 40px;
+
+  color: white;
+  font: 600 15px 'DM Sans', sans-serif;
+  cursor: pointer;
+}
+
+.btn.secondary {
+  background: transparent;
+  color: var(--champagneOro);
+  border-color: var(--champagneOro);
+}
+
+.btn:hover {
+  opacity: 0.88;
+}
+
+.wide {
+  width: 100%;
+  text-align: center;
+}
+
+.actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 14px;
+  margin-top: 32px;
+}
+
+.eyebrow {
+  display: inline-block;
+  padding: 9px 18px;
+
+  border: 1px solid #B88950;
+  border-radius: 40px;
+
+  color: #B88950;
+  font-size: 12px;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+}
+
+.tag {
+  color: var(--champagneOro);
+  font-size: 12px;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+}
+
+.small {
+  font-size: 13px;
+  color: var(--muted);
+}
+
+
+/* ==========================================================
+   7. CONTENEDORES Y SECCIONES
+   ========================================================== */
+
+.wrap {
+  max-width: 1240px;
+  margin: auto;
+  padding: 75px 30px;
+}
+
+.intro {
+  max-width: 740px;
+  margin-bottom: 45px;
+}
+
+.banner {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 70px 20px;
+  background: var(--limonadaSoft);
+  text-align: center;
+}
+
+.banner h2 {
+  color: var(--naranja);
+}
+
+.banner .btn {
+  background-color: var(--naranja);
+}
+
+.banner .btn:hover{
+  background-color: #925c13;
+  transform: translateY(-3px);
+}
+
+.page-title {
+  padding: 65px 0 25px;
+}
+
+.page-title p {
+  max-width: 700px;
+}
+
+.experiencia-destacada-heading {
+  color: var(--naranja);
+}
+
+
+
+/* ==========================================================
+   8. HERO PRINCIPAL
+   ========================================================== */
+
+.hero {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  gap: 7%;
+  min-height: 620px;
+}
+
+.hero p {
+  max-width: 620px;
+  font-size: 20px;
+}
+
+.hero-images {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.hero-images img {
+  width: 50%;
+  height: 340px;
+  object-fit: cover;
+  border-radius: 34px;
+}
+
+.hero-images img:last-child {
+  margin-top: 90px;
+}
+
+/* ==========================================================
+    PICNIC
+   ========================================================== */
+.picnic-slogan {
+  color: var(--champagneOro);
+}
+
+
+.activity-hero h1 {
+  color: var(--champagneOro);
+}
+
+
+
+/* ==========================================================
+   9. TARJETAS Y PRECIOS
+   ========================================================== */
+
+.cards {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 28px;
+}
+
+.card {
+  overflow: hidden;
+  background: var(--cream);
+  border: 1px solid #d8dfd4;
+  border-radius: 32px;
+  box-shadow: 0 8px 20px #2b3d2e08;
+}
+
+.card img {
+  width: 100%;
+  height: 260px;
+  object-fit: cover;
+}
+
+.card-body {
+  padding: 28px;
+}
+
+.card-body p {
+  min-height: 72px;
+}
+
+.card ul {
+  padding-left: 20px;
+  line-height: 2;
+  color: #69665d;
+}
+
+.price-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: end;
+  padding-top: 20px;
+  border-top: 1px solid var(--line);
+}
+
+.price {
+  color: var(--naranja);
+  font: 35px 'Playfair Display', serif;
+}
+
+
+/* ==========================================================
+   10. GALERÍA
+   ========================================================== */
+
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+.gallery img {
+  width: 100%;
+  height: 280px;
+  object-fit: cover;
+  border-radius: 24px;
+}
+
+
+/* ==========================================================
+   11. PASOS
+   ========================================================== */
+
+.steps {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 25px;
+}
+
+.step {
+  padding: 28px;
+  border: 1px solid var(--line);
+  border-radius: 24px;
+}
+
+.step b {
+  color: var(--naranja);
+  font: 32px 'Playfair Display', serif;
+}
+
+
+/* ==========================================================
+   12. PÁGINA DE INICIO
+   ========================================================== */
+
+.home-feature {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  gap: 65px;
+}
+
+.home-feature img {
+  width: 100%;
+  height: 420px;
+  object-fit: cover;
+  border-radius: 30px;
+}
+
+.home-testimonials {
+  padding-top: 45px;
+}
+
+
+/* ==========================================================
+   13. SISTEMA DE RESERVAS
+   ========================================================== */
+
+.booking {
+  max-width: 850px;
+  margin: auto;
+}
+
+/* Barra de progreso */
+.progress {
+  display: flex;
+  gap: 10px;
+  margin: 25px 0 35px;
+}
+
+.progress span {
+  flex: 1;
+  padding: 12px;
+  background: #eceae2;
+  border-radius: 25px;
+
+  color: #817d75;
+  font-size: 13px;
+  text-align: center;
+}
+
+.progress span.on {
+  background: var(--green);
+  color: white;
+}
+
+/* Opciones de reserva */
+.choices {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 14px;
+}
+
+.choice {
+  padding: 20px;
+  background: #fffdf9;
+  border: 1px solid var(--line);
+  border-radius: 20px;
+
+  color: var(--ink);
+  font: inherit;
+  text-align: left;
+  cursor: pointer;
+}
+
+.choice strong {
+  display: block;
+  margin-bottom: 8px;
+}
+
+.choice.selected {
+  background: #edf3ed;
+  border: 2px solid var(--green);
+}
+
+/* Campos de formulario */
+.field {
+  display: block;
+  margin: 18px 0;
+  font-weight: 600;
+}
+
+.field input,
+.field select,
+.field textarea {
+  display: block;
+  width: 100%;
+  margin-top: 8px;
+  padding: 14px;
+
+  background: white;
+  border: 1px solid #cfd8cd;
+  border-radius: 12px;
+  font: inherit;
+}
+
+/* Controles y resumen */
+.booking-controls {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 30px;
+}
+
+.summary {
+  margin: 25px 0;
+  padding: 25px;
+  background: #edf2eb;
+  border-radius: 20px;
+}
+
+.notice {
+  margin: 20px 0;
+  padding: 15px;
+  background: #fff2df;
+  border-radius: 14px;
+  color: #77552a;
+}
+
+.success {
+  background: #e9f2e9;
+  color: #31563d;
+}
+
+
+/* ==========================================================
+   14. CUENTA DE USUARIO
+   ========================================================== */
+
+.account-layout {
+  display: grid;
+  grid-template-columns: 1fr 430px;
+  align-items: center;
+  gap: 9%;
+  min-height: 650px;
+}
+
+.account-intro h1 {
+  font-size: clamp(2.8rem, 4.6vw, 5rem);
+}
+
+.account-panel {
+  padding: 35px;
+  background: #fffdf9;
+  border: 1px solid var(--line);
+  border-radius: 28px;
+  box-shadow: 0 18px 55px #20382a0b;
+}
+
+/* Pestañas */
+.tab-buttons {
+  display: flex;
+  gap: 10px;
+  border-bottom: 1px solid var(--line);
+}
+
+.tab {
+  flex: 1;
+  padding: 15px 5px;
+  background: none;
+  border: 0;
+
+  color: var(--muted);
+  font: 600 15px 'DM Sans', sans-serif;
+  cursor: pointer;
+}
+
+.tab.active {
+  color: var(--green);
+  border-bottom: 3px solid var(--green);
+}
+
+/* Formularios */
+.account-form[hidden],
+#account-auth[hidden],
+#account-signed[hidden] {
+  display: none;
+}
+
+.account-benefits {
+  margin-top: 35px;
+}
+
+.account-benefits p {
+  color: var(--green);
+  font-weight: 600;
+}
+
+
+/* ==========================================================
+   15. RESERVAS DEL USUARIO
+   ========================================================== */
+
+.reservation-list {
+  display: grid;
+  gap: 18px;
+}
+
+.reservation-card {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+
+  padding: 28px 32px;
+  background: #fffdf9;
+  border: 1px solid var(--line);
+  border-radius: 24px;
+}
+
+.reservation-card h3 {
+  margin: 8px 0;
+}
+
+.reservation-card p {
+  margin: 4px 0;
+}
+
+.empty-state {
+  padding: 55px 20px;
+  border: 1px solid var(--line);
+  border-radius: 24px;
+  text-align: center;
+}
+
+.empty-state p {
+  margin: 0 auto 22px;
+}
+
+
+/* ==========================================================
+   16. SUNSET ACTIVITIES
+   ========================================================== */
+
+/* Hero de actividades */
+.activity-hero {
+  display: grid;
+  grid-template-columns: 1.15fr 0.85fr;
+  align-items: center;
+  gap: 6%;
+  min-height: 540px;
+}
+
+.activity-hero img {
+  width: 100%;
+  height: 430px;
+  object-fit: cover;
+  border-radius: 36px;
+}
+
+.activity-hero em {
+  color: var(--naranja);
+  font-style: normal;
+}
+
+
+
+.wrap-tittle {
+  color: var(--champagneOro);
+
+}
+
+/* Cuadrícula de actividades */
+.activity-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 22px;
+  margin-top: 35px;
+}
+
+.activity-card {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  min-height: 310px;
+
+  padding: 30px;
+  background: #fffdf9;
+  border: 1px solid var(--line);
+  border-radius: 28px;
+}
+
+.activity-icon {
+  padding: 14px;
+  background: #f0f3ea;
+  border-radius: 20px;
+  font-size: 40px;
+}
+
+.activity-card h3 {
+  font-size: 1.55rem;
+}
+
+.activity-card p {
+  flex: 1;
+}
+
+.activity-card .btn {
+  margin-top: 18px;
+}
+
+.activity-price {
+  color: var(--naranja);
+  font-weight: 700;
+}
+
+/* Sección de extras */
+.activity-soft {
+  padding: 35px 0;
+  background: var(--limonadaSoft);
+}
+
+h2 {
+  color: var(--naranja);
+}
+
+.extras-pills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin: 30px 0;
+}
+
+.extras-pills span {
+  padding: 13px 20px;
+  background: #fffdf9;
+  border: 1px solid var(--naranja);
+  border-radius: 40px;
+  color: var(--naranja);
+}
+
+/* Recomendaciones */
+.recommend-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 16px;
+  margin-top: 32px;
+}
+
+.recommend-grid div {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+
+  padding: 25px;
+  background: #fffdf9;
+  border: 1px solid var(--naranja);
+  border-radius: 20px;
+}
+
+div b {
+  color: var(--naranja);
+}
+
+
+.recommend-grid span {
+  color: var(--green);
+}
+
+/* Selección de extras */
+.extras-choices {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 12px;
+}
+
+.extra-option {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+
+  padding: 15px;
+  background: #fffdf9;
+  border: 1px solid var(--line);
+  border-radius: 16px;
+  cursor: pointer;
+}
+
+.extra-option input {
+  width: 18px;
+  height: 18px;
+  accent-color: var(--green);
+}
+
+
+/* ==========================================================
+   17. FOOTER
+   ========================================================== */
+
+footer {
+  margin-top: 80px;
+  padding: 50px 5%;
+  background: var(--limonadaSoft);
+  color: var(--naranja);
+  
+}
+
+footer p {
+  color: var(--naranja);
+}
+
+
+/* ==========================================================
+   18. ACCESIBILIDAD
+   ========================================================== */
+
+a:focus-visible,
+button:focus-visible,
+input:focus-visible {
+  outline: 3px solid #a6c6a6;
+  outline-offset: 3px;
+}
+
+
+/* ==========================================================
+   19. RESPONSIVE DESIGN
+   ========================================================== */
+
+/* Pantallas de hasta 1100px */
+@media (max-width: 1100px) {
+  .account-layout {
+    grid-template-columns: 1fr 390px;
+    gap: 30px;
+  }
+}
+
+
+/* Tablets: hasta 900px */
+@media (max-width: 900px) {
+  header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  nav {
+    gap: 12px;
+  }
+
+  .hero,
+  .activity-hero {
+    grid-template-columns: 1fr;
+  }
+
+  .hero-images {
+    max-width: 650px;
+  }
+
+  .cards,
+  .steps,
+  .activity-grid,
+  .recommend-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .activity-hero img {
+    height: 300px;
+  }
+}
+
+
+/* Tablets pequeñas: hasta 800px */
+@media (max-width: 800px) {
+  .home-feature,
+  .account-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .home-feature img {
+    height: 300px;
+  }
+
+  .account-layout {
+    min-height: 0;
+  }
+
+  .account-panel {
+    max-width: 540px;
+  }
+
+  .reservation-card {
+    align-items: flex-start;
+  }
+}
+
+
+/* Móviles: hasta 600px */
+@media (max-width: 600px) {
+  header {
+    padding: 18px;
+  }
+
+  nav {
+    gap: 13px;
+    font-size: 13px;
+  }
+
+  nav a {
+    font-size: 13px;
+  }
+
+  .wrap {
+    padding: 45px 18px;
+  }
+
+  /* Hero */
+  .hero {
+    min-height: 0;
+  }
+
+  .hero h1 {
+    font-size: clamp(2.8rem, 12vw, 4rem);
+  }
+
+  .hero-images img {
+    height: 220px;
+  }
+
+  /* Cuadrículas */
+  .cards,
+  .steps,
+  .choices,
+  .gallery,
+  .activity-grid,
+  .recommend-grid,
+  .extras-choices {
+    grid-template-columns: 1fr;
+  }
+
+  /* Tarjetas */
+  .card-body p {
+    min-height: 0;
+  }
+
+  .price-row {
+    gap: 10px;
+  }
+
+  /* Reservas */
+  .progress span {
+    padding: 9px 4px;
+    font-size: 11px;
+  }
+
+  .reservation-card {
+    flex-direction: column;
+  }
+
+  /* Cuenta */
+  .account-panel {
+    padding: 24px;
+  }
+}

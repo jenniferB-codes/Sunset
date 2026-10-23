@@ -1,0 +1,139 @@
+<!doctype html>
+<html lang="es">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width,initial-scale=1" name="viewport"/>
+  <meta content="Willow &amp; Linen &mdash; picnics y brunches cuidadosamente preparados" name="description"/>
+  <title>
+   Mi cuenta | Willow &amp; Linen
+  </title>
+  <link href="style.css" rel="stylesheet"/>
+ </head>
+ <body>
+  <header>
+   <a class="brand" href="index.html">
+    <div class="logo-container">
+        <img class="logo-nav" src="images/Golden Sunset Sunburst Logo.png">
+    </div>
+   </a>
+   <nav>
+    <a class="active" href="index.html">
+     Inicio
+    </a>
+    <a href="actividades.html">Sunset Activities</a>
+    <a href="como-funciona.html">
+     C&oacute;mo funciona
+    </a>
+    <a href="cuenta.html">
+     Mi cuenta
+    </a>
+    <a href="mis-reservas.html">
+     Mis reservas
+    </a>
+    <a class="btn" href="reservar.html">
+     Reservar
+    </a>
+   </nav>
+  </header>
+  <main>
+   <section class="wrap account-layout">
+    <div class="account-intro">
+     <span class="eyebrow">
+      Tu espacio Willow &amp; Linen
+     </span>
+     <h1>
+      Momentos especiales, organizados en un solo lugar.
+     </h1>
+     <p>
+      Crea tu cuenta o inicia sesi&oacute;n para guardar tus solicitudes y consultar el desglose de precios.
+     </p>
+     <div class="account-benefits">
+      <p>
+       &checkmark; Guarda tus experiencias elegidas
+      </p>
+      <p>
+       &checkmark; Consulta actividades y totales
+      </p>
+      <p>
+       &checkmark; Revisa tus solicitudes anteriores
+      </p>
+     </div>
+    </div>
+    <div class="account-panel">
+     <div id="account-message" role="status">
+     </div>
+     <div id="account-auth">
+      <div class="tab-buttons">
+       <button class="tab active" data-tab="login" type="button">
+        Iniciar sesi&oacute;n
+       </button>
+       <button class="tab" data-tab="register" type="button">
+        Crear cuenta
+       </button>
+      </div>
+      <form class="account-form" id="login-form">
+       <label class="field">
+        Correo electr&oacute;nico
+        <input autocomplete="email" name="email" required="" type="email"/>
+       </label>
+       <label class="field">
+        Contrase&ntilde;a
+        <input autocomplete="current-password" minlength="8" name="password" required="" type="password"/>
+       </label>
+       <button class="btn wide" type="submit">
+        Iniciar sesi&oacute;n
+       </button>
+      </form>
+      <form class="account-form" hidden="" id="register-form">
+       <label class="field">
+        Nombre
+        <input autocomplete="name" maxlength="100" name="name" required=""/>
+       </label>
+       <label class="field">
+        Correo electr&oacute;nico
+        <input autocomplete="email" name="email" required="" type="email"/>
+       </label>
+       <label class="field">
+        Contrase&ntilde;a (m&iacute;nimo 8 caracteres)
+        <input autocomplete="new-password" minlength="8" name="password" required="" type="password"/>
+       </label>
+       <button class="btn wide" type="submit">
+        Crear mi cuenta
+       </button>
+      </form>
+     </div>
+     <div hidden="" id="account-signed">
+      <h2>
+       &iexcl;Hola,
+       <span id="account-name">
+       </span>
+       !
+      </h2>
+      <p>
+       Tu cuenta est&aacute; lista para guardar tus solicitudes.
+      </p>
+      <a class="btn" href="mis-reservas.html">
+       Ver mis reservas
+      </a>
+      <button class="btn secondary" id="logout-btn" type="button">
+       Cerrar sesi&oacute;n
+      </button>
+     </div>
+    </div>
+   </section>
+  </main>
+  <footer>
+   <div class="brand">
+    Willow &amp; Linen
+   </div>
+   <p>
+    Picnics, brunches y momentos especiales al aire libre.
+   </p>
+   <small>
+    &copy; 2026 Willow &amp; Linen &middot; Sitio de demostraci&oacute;n
+   </small>
+  </footer>
+  <script src="app.js">
+  </script>
+ </body>
+</html>
