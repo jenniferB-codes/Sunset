@@ -36,7 +36,6 @@ html {
 body {
   margin: 0;
   background: var(--blancoCalido);
-  color: var(--line);
   font-family: 'DM Sans', sans-serif;
   font-size: 16px;
 }
@@ -60,7 +59,10 @@ h3,
 .brand {
   font-family: 'Playfair Display', serif;
   font-weight: 500;
+
 }
+
+
 
 .wrap-home-feature h2, .wrap-home-testimonials h2 {
   color: var(--naranja);
@@ -77,6 +79,7 @@ h1 {
   font-size: clamp(3rem, 6vw, 5.5rem);
   line-height: 1.08;
   letter-spacing: -0.04em;
+  color: var(--naranja);
 }
 
 h2 {
